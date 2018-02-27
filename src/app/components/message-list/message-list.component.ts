@@ -3,14 +3,14 @@ import { Message } from '../../models';
 import { MessageItemComponent } from '../../components/message-item/message-item.component';
 
 @Component({
-  selector: 'message-list',
+  selector: 'app-message-list',
   templateUrl: './message-list.component.html',
   styleUrls: ['./message-list.component.scss']
 })
 export class MessageListComponent implements OnInit, AfterViewInit {
 
   @Input('messages')
-   messages: Message[];
+  messages: Message[];
 
   @ViewChild('chatlist', { read: ElementRef }) chatList: ElementRef;
   @ViewChildren(MessageItemComponent, { read: ElementRef }) chatItems: QueryList<MessageItemComponent>;
@@ -24,7 +24,7 @@ export class MessageListComponent implements OnInit, AfterViewInit {
     });
   }
 
-   scrollToBottom(): void {
+  scrollToBottom(): void {
     try {
       this.chatList.nativeElement.scrollTop = this.chatList.nativeElement.scrollHeight;
     } catch (err) {

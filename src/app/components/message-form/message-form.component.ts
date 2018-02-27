@@ -3,7 +3,7 @@ import { Message } from '../../models';
 import { DialogflowService } from '../../services';
 
 @Component({
-  selector: 'message-form',
+  selector: 'app-message-form',
   templateUrl: './message-form.component.html',
   styleUrls: ['./message-form.component.scss']
 })
@@ -15,7 +15,7 @@ export class MessageFormComponent implements OnInit {
   @Input('messages')
   messages: Message[];
 
-  constructor(dialogFlowService: DialogflowService) { }
+  constructor(private dialogFlowService: DialogflowService) { }
 
   ngOnInit() {
   }
