@@ -1,5 +1,11 @@
-.chatform{
-  width: 600px;
+.chatform {
+  position: fixed;
+  z-index: 10000000;
+  bottom: 0;
+  width: 25vw;
   margin: 0 auto;
-  margin-top: 50px;
+  right: 10vw;
+  border: 1px solid black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }

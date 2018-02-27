@@ -1,11 +1,12 @@
 <li class="list-group-item">
   <img [src]="message.avatar" class="avatar" />
-  <div [innerHTML]="message.content" class="message">
+  <div class="timeform">
+    <i class="fa fa-clock-o" aria-hidden="true"></i>
+    <span class="timestamp">at {{message.timestamp | date : 'hh:mm:ss a' }}</span>
+  </div>
+  <div [innerHTML]="message.content | safeHtml" class="message">
 
     <!-- {{message.content | safeHtml}} -->
   </div>
-  <div class="timeform">
-    <i class="fa fa-clock-o" aria-hidden="true"></i>
-    <span class="timestamp">at {{message.timestamp | date : 'dd/MM/yyyy' }}</span>
-  </div>
+
 </li>

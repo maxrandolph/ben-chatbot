@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
-a {
-  color: blue !important;
+.btn-success {
+  background-color: #1168AF;
+  border-color: #0d5086;
+  font-family: "Roboto", sans-serif;
+}
+
+.btn-success:hover {
+  background-color: rgb(23, 136, 228);
+  cursor: pointer;
 }

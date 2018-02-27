@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Message } from '@app/models';
-import { DialogflowService } from '@app/services';
+import { Message } from '../../models';
+import { DialogflowService } from '../../services';
 
 @Component({
   selector: 'message-form',
@@ -10,26 +10,29 @@ import { DialogflowService } from '@app/services';
 export class MessageFormComponent implements OnInit {
 
   @Input('message')
-  private message: Message;
+  message: Message;
 
   @Input('messages')
-  private messages: Message[];
+  messages: Message[];
 
-  constructor(private dialogFlowService: DialogflowService) { }
+  constructor(dialogFlowService: DialogflowService) { }
 
   ngOnInit() {
   }
 
   public sendMessage(): void {
+    if (this.message.content.length < 1) {
+      return null;
+    }
     this.message.timestamp = new Date();
 
     console.log(this.message);
     this.messages.push(this.message);
 
     this.dialogFlowService.getResponse(this.message.content).subscribe(res => {
+      console.log(res.result.fulfillment.speech);
       this.messages.push(
-        new Message(res.result.fulfillment.speech.replace('https://www.xpressreg.net/register/PACK0418',
-          '<a href="https://www.xpressreg.net/register/PACK0418">Click me</a>'), 'assets/images/bot.png', res.timestamp)
+        new Message(res.result.fulfillment.speech, 'assets/images/bot.png', res.timestamp)
       );
     });
 

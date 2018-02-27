@@ -2,21 +2,20 @@
   font-size: 1em;
   font-style: italic;
   font-weight: 400;
+  max-width: 80%;
+  margin-top: 10px;
 }
 
 .timeform {
-  float: left;
-  width: 100%;
-  i {
-    margin-left: 20px;
-  }
-  .timestamp {
-    font-size: 0.6em;
-  }
+  float: right;
+  position: absolute;
+  width: 30%;
+  top: 10px;
+  left: 16%;
+  font-size: 10px;
 }
 
 .avatar {
   width: 50px;
   margin-right: 20px;
 }
-
