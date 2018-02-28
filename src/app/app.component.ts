@@ -9,6 +9,7 @@ import { Message } from './models';
 export class AppComponent {
   public message: Message;
   public messages: Message[];
+  expanded = true;
 
 
   constructor() {
