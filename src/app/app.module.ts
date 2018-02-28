@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import { DialogflowService } from '@app/services';
-import { MessageListComponent, MessageFormComponent, MessageItemComponent } from '@app/components';
-import { SafeHtmlPipe } from './safe-html.pipe'
+import { DialogflowService } from './services';
+import { MessageListComponent, MessageFormComponent, MessageItemComponent } from './components';
+import { SafeHtmlPipe } from './safe-html.pipe';
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,11 @@ import { SafeHtmlPipe } from './safe-html.pipe'
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    LoggerModule.forRoot({
+      serverLoggingUrl: 'https://jxksctq2n8.execute-api.us-east-1.amazonaws.com/prod/my_logger',
+      level: NgxLoggerLevel.LOG, serverLogLevel: NgxLoggerLevel.LOG
+    })
   ],
   providers: [
     DialogflowService
