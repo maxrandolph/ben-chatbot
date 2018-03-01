@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { environment } from '../../environments/environment';
 
@@ -17,11 +17,11 @@ export class DialogflowService {
       query: query,
       lang: 'en',
       sessionId: '12345'
-    }
+    };
     return this.http
       .post(`${this.baseURL}`, data, { headers: this.getHeaders() })
       .map(res => {
-        return res.json()
+        return res.json();
       });
   }
 
