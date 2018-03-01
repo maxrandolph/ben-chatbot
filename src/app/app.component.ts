@@ -15,7 +15,7 @@ export class AppComponent {
   constructor() {
     this.message = new Message('', 'assets/images/user.png');
     this.messages = [
-      new Message('Greetings from the PACK EXPO East bot!', 'assets/images/bot.png', new Date())
+      new Message('Hi! I am Pax, the PACK EXPO East bot! I can answer your common questions about the show.', 'assets/images/bot.png', new Date())
     ];
   }
 }
