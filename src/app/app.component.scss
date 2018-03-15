@@ -19,12 +19,18 @@
   width: 100%;
   height: 35px;
   cursor: pointer;
-  position:relative; left:10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .toggle-btn:hover {
   background-color: rgb(220, 220, 220);
-  
+}
+
+.toggle-btn-logo {
+  position: absolute;
+  left: 1.25rem;
+  max-width: 25px;
 }
 
 .toggle-icon {
