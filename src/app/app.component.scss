@@ -3,7 +3,7 @@
   position: fixed;
   z-index: 10000000;
   bottom: 0;
-  width: 25vw;
+  width: 26vw;
   margin: 0 auto;
   right: 3vw;
   border: 1px solid black;
@@ -15,10 +15,11 @@
 
 .toggle-btn {
   display: inline-flex;
-  padding-left: 65px;
+  padding-left: 15px;
   width: 100%;
-  height: 25px;
+  height: 35px;
   cursor: pointer;
+  position:relative; left:10px;
 }
 
 .toggle-btn:hover {
