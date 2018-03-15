@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="chatform" [ngStyle]="(expanded) ? {'height':'500px'} : {'height':'25px'}">
   <span (click)="expanded=!expanded" class="toggle-btn">
-    <i class="fa fa-arrow-up toggle-icon" aria-hidden="true" [ngStyle]="(expanded) ? {'transform':'rotateX(3.142rad)'} : {'transform':'rotate(0)'}"></i><b><i>Ask me something about the show!</i></b>
+    <i class="fa fa-arrow-up toggle-icon" aria-hidden="true" [ngStyle]="(expanded) ? {'transform':'rotateX(3.142rad)'} : {'transform':'rotate(0)'}"></i><b><i>Ask me about the show!</i></b>
   </span>
   <app-message-list [messages]="messages"></app-message-list>
   <app-message-form [message]="message" [messages]="messages"></app-message-form>
