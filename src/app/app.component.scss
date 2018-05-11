@@ -8,11 +8,10 @@
     bottom: 0;
     width: 100vw;
     margin: 0 auto;
-    right: 0;
-    border: 1px solid black;
-    border-bottom: 0;
-    border-left: 0;
-    border-right: 0;
+    right: 0; // border: 1px solid black;
+    // border-bottom: 0;
+    // border-left: 0;
+    // border-right: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     transition: .3s height ease-in-out;
@@ -39,11 +38,10 @@
     bottom: 0;
     width: 100vw;
     margin: 0 auto;
-    right: 0;
-    border: 1px solid black;
-    border-bottom: 0;
-    border-left: 0;
-    border-right: 0;
+    right: 0; // border: 1px solid black;
+    // border-bottom: 0;
+    // border-left: 0;
+    // border-right: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     transition: .3s height ease-in-out;
@@ -70,8 +68,7 @@
     bottom: 0;
     width: 26vw;
     margin: 0 auto;
-    right: 3vw;
-    border: 1px solid black;
+    right: 3vw; // border: 1px solid black;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     transition: .3s height ease-in-out;
@@ -125,4 +122,33 @@
   transition: .5s transform ease-in-out;
   padding-top: 5px;
   padding-right: 15px;
+}
+
+@-webkit-keyframes redPulse {
+  from {
+    background-color: #ffffff;
+  }
+  50% {
+    background-color: #c65656;
+    -webkit-box-shadow: 0 0 20px #bd0909;
+  }
+  to {
+    background-color: #ffffff;
+  }
+}
+
+.toggle-btn {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  -webkit-animation-name: redPulse;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: 5;
+}
+
+.chatform {
+  -webkit-box-shadow: 0 0 9px #333;
+}
+
+.list-group-item {
+  border-radius: 0 !important;
 }
